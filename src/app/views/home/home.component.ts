@@ -7,12 +7,14 @@ import { FornecedoresService } from '../../services/fornecedores.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  fornecedores: any[] | undefined;
   constructor(private fornecedorService: FornecedoresService) {
 
   }
   ngOnInit(): void {
-    this.fornecedorService.all().subscribe(result => {
+    this.fornecedorService.all().subscribe((result: any) => {
       console.log(result);
+      this.fornecedores = result._embedded.fornecedores;
     })
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FornecedoresService } from '../../services/fornecedores.service';
+import { FornecedorMockService } from '../../services/fornecedor-mock.service';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { FornecedoresService } from '../../services/fornecedores.service';
 })
 export class HomeComponent implements OnInit {
   fornecedores: any[] | undefined;
-  constructor(private fornecedorService: FornecedoresService) {
+  constructor(private fornecedorService: FornecedorMockService) {
 
   }
   ngOnInit(): void {

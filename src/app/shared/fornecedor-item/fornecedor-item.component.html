@@ -1,1 +1,17 @@
-<div>{{ fornecedor.nome }}</div>
+<p>
+	{{ fornecedor.nome }}
+  <button
+		type="button"
+		class="btn btn-outline-primary"
+		(click)="collapse.toggle()"
+		[attr.aria-expanded]="!isCollapsed"
+		aria-controls="collapseExample"
+	>
+		Detalhes
+	</button>
+</p>
+<div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+	<div class="card">
+		<div class="card-body"><pre>{{ fornecedor | json }}</pre><div>
+	</div>
+</div>

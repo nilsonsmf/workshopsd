@@ -10,7 +10,7 @@ export class FornecedoresService {
 
   all(): Observable<Object> {
     return this.http.get(
-      'http://compras.dados.gov.br/fornecedores/v1/fornecedores.json?uf=DF'
+      '/api/fornecedores/v1/fornecedores.json?uf=DF'
     );
   }
 }

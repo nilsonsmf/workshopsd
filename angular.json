@@ -69,7 +69,8 @@
               "browserTarget": "workshopsd:build:production"
             },
             "development": {
-              "browserTarget": "workshopsd:build:development"
+              "browserTarget": "workshopsd:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

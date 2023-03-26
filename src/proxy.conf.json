@@ -1,6 +1,10 @@
 {
   "/api": {
-    "target": "http://compras.dados.gov.br/",
-    "secure": false
+    "target": "http://compras.dados.gov.br",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
   }
 }

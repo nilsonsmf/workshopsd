@@ -1,5 +1,3 @@
 <div class="container">
-  <ul>
-    <li *ngFor="let item of fornecedores" title="{{ item | json }}">{{ item.nome }}</li>
-  </ul>
+  <app-fornecedor-list [fornecedores]="fornecedores"></app-fornecedor-list>
 </div>
